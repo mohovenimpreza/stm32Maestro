@@ -1,0 +1,19 @@
+/**
+ * @mainpage Système de Synthèse Musicale pour STM32
+ *
+ * @section intro_sec Présentation
+ * Ce projet transforme une carte **Nucleo-F446RE** en un synthétiseur interactif. 
+ * Il simule différents instruments (Piano, Trompette, Guitare) via modulation PWM.
+ *
+ * @section features_sec Fonctionnalités principales
+ * - **Synthèse Granulaire** : Sculpture du volume @b milliseconde par @b milliseconde.
+ * - **Délais Non-Bloquants** : Utilisation de @ref delay_NBC pour une réactivité instantanée.
+ * - **Correction de Fréquence** : Compensation matérielle pour une justesse parfaite.
+ * - **Contrôle Hardware** : Gestion optimisée du @b Timer @b 2 et de l'ADC.
+ *
+ * @section arch_sec Architecture logicielle
+ * Le système repose sur une interruption **Systick** cadencée à 1ms. 
+ * Cette base de temps est le métronome du système pour :
+ * 1. La progression des notes dans la @ref Partition.
+ * 2. L'évolution des enveloppes @ref instrument_t (ADSR).
+ */

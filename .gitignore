@@ -1,0 +1,7 @@
+obj/
+bin/
+*.o
+*.elf
+*.bin
+*.map
+.DS_Store
